@@ -1,0 +1,62 @@
+import com.mistletoe.gilde.ksp.buildsrc.*
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.devtools.ksp'
+}
+
+android {
+    compileSdk Versions.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.mistletoe.glide.ksp"
+        minSdk Versions.minSdkVersion
+        targetSdk Versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    sourceSets {
+        main {
+            java.srcDirs += ['build/generated/ksp/debug/kotlin']
+        }
+    }
+}
+ksp {
+    arg( "GlideModule","com.mistletoe.glide.ksp.demo.lib.ProgressLibraryGlideModule|com.bumptech.glide.integration.okhttp3.OkHttpLibraryGlideModule")
+}
+
+dependencies {
+    implementation AndroidX.core_ktx
+    implementation AndroidX.core
+    implementation AndroidX.appcompat
+    implementation UIKit.material
+    implementation UIKit.constraint_layout
+    implementation Dependencies.glide_core
+    implementation Dependencies.glide_okhttp3_integration
+    implementation Dependencies.glide_transformations
+    testImplementation Test.junit
+    androidTestImplementation Test.android_test_ext
+    androidTestImplementation Test.android_test_espresso
+    implementation project(':demo-lib')
+    if (GlideKSP.debug_mode) {
+        ksp project(":glide-ksp-core")
+    } else {
+        ksp GlideKSP.core
+    }
+}

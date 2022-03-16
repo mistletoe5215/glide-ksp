@@ -1,0 +1,29 @@
+import com.mistletoe.gilde.ksp.buildsrc.*
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url Repos.jitpack }
+    }
+    dependencies {
+        classpath Dependencies.androidGradlePlugin
+        classpath Kotlin.gradle_plugin
+        classpath Dependencies.androidMavenGradlePlugin
+    }
+}
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10' apply false
+    id 'com.google.devtools.ksp' version "1.6.10-1.0.2" apply false
+}
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url Repos.jitpack }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

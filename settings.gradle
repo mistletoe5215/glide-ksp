@@ -1,0 +1,4 @@
+rootProject.name = "Glide-Compiler-KSP"
+include ':app'
+include ':glide-ksp-core'
+include ':demo-lib'
