@@ -21,8 +21,8 @@ object Dependencies {
 }
 
 object GlideKSP {
-    const val debug_mode = true
-    const val core = "com.mistletoe:glide-ksp:0.0.1"
+    const val debug_mode = false
+    const val core = "com.github.mistletoe5215:glide-ksp:0.0.1"
 }
 
 object Kotlin {
