@@ -41,7 +41,7 @@
 
  > use ksp `options` to  mark the custom LibraryGlideModules;since in java annotation processor/`kapt` these classes  can be found using `RoundEnvironment` to find class  with `@GlideModule` annotation;
  > but now in ksp ,we can't find these classes with using ksp's `Resolver` or `SymbolProcessorEnvironment`.see [issue in ksp](https://github.com/google/ksp/issues/131)
- > therefore,i can only put these class's qualifiedNames into ksp compile args to solve it(so stupid ( :(,any one can help plz push request)
+ > therefore,i can only put these class qualifiedNames into ksp compile args to solve it(so stupid ( :(,any one can help me plz push request)
  > they're split by "|" separator,use key named `GlideModule`
  > the custom LibraryGlideExtensions,as well,use key named `GlideExtension`
 
@@ -54,12 +54,12 @@
 
 ```
 
-### checking if Glide-KSP proceed successfully
+### check whether Glide-KSP proceed successfully
 
  - make sure the necessary classes are generated ,they are `GeneratedAppGlideModuleImpl`,`GeneratedRequestManagerFactory`,`GlideApp`,`GlideOption`,`GlideRequest`,`GlideRequests`
 
 ![](./snapshots/generated_classes.png)
 
- - then,call Glide's init in Application, ,set break points in `GeneratedAppGlideModuleImpl`,run app as  debug mode to see whether it will block in these break points
+ - then,call Glide's init in Application,set break points in `GeneratedAppGlideModuleImpl`,run app as  debug mode to see whether it will block in these break points
    
- - finally,see if it keeps functioning properly,load image as usual
+ - finally,see whether it keeps functioning properly,load image successfully as usual
