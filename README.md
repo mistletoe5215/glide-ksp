@@ -53,7 +53,7 @@ allprojects {
 ```
  -  find classes  with `@GlideModule`/`@GlideExtension` in library module
 
- > use ksp `options` to  mark the custom LibraryGlideModules;since in java annotation processor/`kapt` these classes  can be found using `RoundEnvironment` to find class  with `@GlideModule` annotation;
+ > use ksp `options` to  mark the custom LibraryGlideModules;cuz in java annotation processor/`kapt` these classes  can be found using `RoundEnvironment` to find class  with `@GlideModule` annotation;
  > but now in ksp ,we can't find these classes with using ksp's `Resolver` or `SymbolProcessorEnvironment`.see [issue in ksp](https://github.com/google/ksp/issues/131)
  > therefore,i can only put these class qualifiedNames into ksp compile args to solve it(so stupid ( :(,any one can help me plz push request)
  > they're split by "|" separator,use key named `GlideModule`
