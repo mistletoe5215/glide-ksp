@@ -2,6 +2,12 @@
 
 > glide's ksp compiler ,use kotlin symbol processor
 
+### requirements
+|library name|version|
+|:----:|:----:|
+|kotlin| >= `1.6.10`|
+|ksp| `1.6.10-1.0.2`|
+
 ### usage
 
 - add jitpack repository to repositories
