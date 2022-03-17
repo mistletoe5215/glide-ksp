@@ -4,6 +4,20 @@
 
 ### usage
 
+- add jitpack repository to repositories
+
+```groovy
+//in root build.gradle
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url Repos.jitpack }
+    }
+}
+
+```
+
 - import kotlin symbol processor plugin
 
 ```groovy
