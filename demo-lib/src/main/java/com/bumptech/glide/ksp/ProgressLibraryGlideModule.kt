@@ -1,4 +1,4 @@
-package com.mistletoe.glide.ksp.demo.lib
+package com.bumptech.glide.ksp
 
 import android.content.Context
 import android.util.Log

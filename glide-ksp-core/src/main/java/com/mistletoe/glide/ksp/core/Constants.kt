@@ -33,4 +33,5 @@ internal const val TRANS_CODE_TYPE_NAME = "TranscodeType"
 internal val KOTLIN_LIST_CLASS_NAME = ClassName("kotlin.collections", "List")
 internal val KOTLIN_MUTABLE_LIST_CLASS_NAME = ClassName("kotlin.collections", "MutableList")
 internal const val GLIDE_MODULES_KEY = "GlideModule"
+internal const val GLIDE_MODULES_KSP_PACKAGE_NAME = "com.bumptech.glide.ksp"
 internal const val GLIDE_EXTENSIONS_KEY = "GlideExtension"

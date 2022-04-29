@@ -15,7 +15,7 @@ import com.mistletoe.glide.ksp.core.processors.LibraryModuleProcessor
  **/
 class KSPGlideProcessor(private val environment: SymbolProcessorEnvironment) : SymbolProcessor {
     companion object {
-        const val DEBUG = false
+        const val DEBUG = true
     }
 
     private var isSolved: Boolean = false
