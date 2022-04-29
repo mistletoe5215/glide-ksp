@@ -65,9 +65,9 @@ allprojects {
  > they're splited by "|" separator,use key named `GlideModule`
  > the custom LibraryGlideExtensions,as well,use key named `GlideExtension`
 
- - find classes  with `@GlideModule`/`@GlideExtension` in new library module which has created `com.com.bumptech.glide.ksp` directory 
+ - find classes  with `@GlideModule`/`@GlideExtension` in new library module which has created `com.bumptech.glide.ksp` directory 
 
- > put the module's LibraryGlideModule Impl class under `com.com.bumptech.glide.ksp` directory ,it can be found and registered automatically
+ > put the module's LibraryGlideModule Impl class under `com.bumptech.glide.ksp` directory ,it can be found and registered automatically
  
 
 ```groovy
