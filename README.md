@@ -73,7 +73,7 @@ allprojects {
 ```groovy
     //in application's build.gradle convention scope
    ksp {
-       arg( "GlideModule","com.mistletoe.glide.ksp.demo.lib.ProgressLibraryGlideModule|com.bumptech.glide.integration.okhttp3.OkHttpLibraryGlideModule")
+       arg( "GlideModule","com.bumptech.glide.integration.okhttp3.OkHttpLibraryGlideModule")
    }
 
 ```
