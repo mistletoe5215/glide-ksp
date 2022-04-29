@@ -52,12 +52,12 @@ allprojects {
    }
    //add `glide-ksp` using ksp 
    dependencies {
-       ksp "com.github.mistletoe5215:glide-ksp:0.0.1"
+       ksp "com.github.mistletoe5215:glide-ksp:0.0.2"
    }
    
 
 ```
- -  find classes  with `@GlideModule`/`@GlideExtension` in library module
+ -  find classes  with `@GlideModule`/`@GlideExtension` in previous uploaded open source library module
 
  > use ksp `options` to  mark the custom LibraryGlideModules; in java annotation processor/`kapt` these classes  can be found using `RoundEnvironment` to find class  with `@GlideModule` annotation;
  > but now in ksp ,we can't find these classes with using ksp's `Resolver` or `SymbolProcessorEnvironment`.see [issue in ksp](https://github.com/google/ksp/issues/131)
@@ -65,6 +65,10 @@ allprojects {
  > they're splited by "|" separator,use key named `GlideModule`
  > the custom LibraryGlideExtensions,as well,use key named `GlideExtension`
 
+ - find classes  with `@GlideModule`/`@GlideExtension` in new library module which has created `com.com.bumptech.glide.ksp` directory 
+
+ > put the module's LibraryGlideModule Impl class under `com.com.bumptech.glide.ksp` directory ,it can be found and registered automatically
+ 
 
 ```groovy
     //in application's build.gradle convention scope
