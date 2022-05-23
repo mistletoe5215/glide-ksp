@@ -64,12 +64,7 @@ allprojects {
  > therefore,i can only put these class qualifiedNames into ksp compile args to solve it(so stupid ( :(,any one can help me plz push request)
  > they're splited by "|" separator,use key named `GlideModule`
  > the custom LibraryGlideExtensions,as well,use key named `GlideExtension`
-
- - find classes  with `@GlideModule`/`@GlideExtension` in new library module which has created `com.bumptech.glide.ksp` directory 
-
- > put the module's LibraryGlideModule Impl class under `com.bumptech.glide.ksp` directory ,it can be found and registered automatically
  
-
 ```groovy
     //in application's build.gradle convention scope
    ksp {
@@ -77,6 +72,11 @@ allprojects {
    }
 
 ```
+
+ - find classes  with `@GlideModule`/`@GlideExtension` in new library module which has created `com.bumptech.glide.ksp` directory 
+
+ > put the module's LibraryGlideModule Impl class under `com.bumptech.glide.ksp` directory ,it can be found and registered automatically
+ 
 
 ### check whether Glide-KSP proceed successfully
 
