@@ -1,6 +1,6 @@
 # glide-ksp [![](https://jitpack.io/v/mistletoe5215/glide-ksp.svg)](https://jitpack.io/#mistletoe5215/glide-ksp)
 
-> glide's ksp compiler ,use kotlin symbol processor
+> glide's kotlin annotation processor,use kotlin symbol processor(ksp)
 
 ### requirements
 |library|version|
