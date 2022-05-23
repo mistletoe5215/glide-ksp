@@ -46,7 +46,7 @@ allprojects {
        //...
        sourceSets {
            main {
-               java.srcDirs += ['build/generated/ksp/debug/kotlin']
+               java.srcDirs += ['build/generated/ksp']
            }
        }
    }
