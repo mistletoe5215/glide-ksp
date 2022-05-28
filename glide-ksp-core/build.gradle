@@ -2,8 +2,8 @@ import com.mistletoe.gilde.ksp.buildsrc.*
 plugins {
     id 'java-library'
     id 'org.jetbrains.kotlin.jvm'
-    id 'com.github.dcendents.android-maven'
 }
+apply from: '../publish.gradle'
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
@@ -15,4 +15,9 @@ dependencies {
     compileOnly Kotlin.kcp_embeddable
     implementation Square.kotlin_poet
     compileOnly Google.ksp
+}
+compileKotlin {
+    kotlinOptions {
+        languageVersion = "1.6"
+    }
 }

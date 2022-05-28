@@ -19,14 +19,14 @@ class KSPGlideProcessor(private val environment: SymbolProcessorEnvironment) : S
     }
 
     private var isSolved: Boolean = false
-    private val isCompatible by lazy { environment.kotlinVersion.isAtLeast(1, 6, 10) }
+    private val isCompatible by lazy { environment.kotlinVersion.isAtLeast(1, 6, 0) }
     private var processorUtil: ProcessorUtil? = null
     private var libraryModuleProcessor: LibraryModuleProcessor? = null
     private var appModuleProcessor: AppModuleProcessor? = null
     private var extensionProcessor: ExtensionProcessor? = null
     override fun process(resolver: Resolver): List<KSAnnotated> {
         require(isCompatible) {
-            "current module's kotlin version must be at least 1.6.10"
+            "current module's kotlin version must be at least 1.6.0"
         }
         //codes in init block
         if (processorUtil == null) {

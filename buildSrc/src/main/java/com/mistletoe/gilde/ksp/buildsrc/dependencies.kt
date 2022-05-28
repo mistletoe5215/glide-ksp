@@ -4,13 +4,7 @@ package com.mistletoe.gilde.ksp.buildsrc
  * Created by mistletoe
  * on 2022/1/12
  **/
-
-object Repos {
-    const val jitpack = "https://jitpack.io"
-}
-
 object Dependencies {
-    const val androidMavenGradlePlugin = "com.github.dcendents:android-maven-gradle-plugin:2.1"
     const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.agp}"
     const val glide_annotation = "com.github.bumptech.glide:annotations:${Versions.glide}"
     const val glide_core = "com.github.bumptech.glide:glide:${Versions.glide}"
@@ -22,7 +16,7 @@ object Dependencies {
 
 object GlideKSP {
     const val debug_mode = false
-    const val core = "com.github.mistletoe5215:glide-ksp:0.0.2"
+    const val core = "io.github.mistletoe5215:glide-ksp:1.0.0"
 }
 
 object Kotlin {
@@ -61,10 +55,10 @@ object Versions {
     const val compileSdkVersion = 30
     const val minSdkVersion = 23
     const val targetSdkVersion = 30
-    const val kotlin = "1.6.10"
-    const val agp = "4.1.3"
+    const val kotlin = "1.6.21"
+    const val agp = "7.0.3"
     const val glide = "4.12.0"
     const val glide_transform = "4.3.0"
     const val kotlin_poet = "1.2.0"
-    const val ksp = "1.6.10-1.0.2"
+    const val ksp = "1.6.21-1.0.5"
 }

@@ -1,16 +1,16 @@
-# glide-ksp [![](https://jitpack.io/v/mistletoe5215/glide-ksp.svg)](https://jitpack.io/#mistletoe5215/glide-ksp)
+# glide-ksp [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.mistletoe5215/glide-ksp/badge.svg)](https://search.maven.org/search?q=g:io.github.mistletoe5215%20AND%20a:glide-ksp%20AND%20v:1.0.0)
 
 > glide's kotlin annotation processor,use kotlin symbol processor(ksp)
 
 ### requirements
 |library|version|
 |:----:|:----:|
-|kotlin| >= `1.6.10`|
-|ksp| `1.6.10-1.0.2`|
+|kotlin| >= `1.6.21`|
+|ksp| `1.6.21-1.0.5`|
 
 ### usage
 
-- add jitpack repository to repositories
+- add mavenCentral repository to repositories
 
 ```groovy
 //in root build.gradle
@@ -18,7 +18,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url "https://jitpack.io" }
+        mavenCentral()
     }
 }
 
@@ -29,7 +29,7 @@ allprojects {
 ```groovy
     // in root build.gradle
    plugins {
-    id 'com.google.devtools.ksp' version "1.6.10-1.0.2" apply false
+    id 'com.google.devtools.ksp' version "1.6.21-1.0.5" apply false
    }
 
 ```
@@ -52,7 +52,7 @@ allprojects {
    }
    //add `glide-ksp` using ksp 
    dependencies {
-       ksp "com.github.mistletoe5215:glide-ksp:0.0.2"
+       ksp "io.github.mistletoe5215:glide-ksp:1.0.0"
    }
    
 

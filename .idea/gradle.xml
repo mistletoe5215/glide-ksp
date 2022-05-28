@@ -16,7 +16,6 @@
             <option value="$PROJECT_DIR$/glide-ksp-core" />
           </set>
         </option>
-        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>
