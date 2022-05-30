@@ -24,10 +24,10 @@ allprojects {
 
 ```
 
-- import kotlin symbol processor plugin
+- declare kotlin symbol processor plugin and it's version without applying it  if u have any other usages of ksp
 
 ```groovy
-    // in root build.gradle
+    // in root build.gradle 
    plugins {
     id 'com.google.devtools.ksp' version "1.6.21-1.0.5" apply false
    }
@@ -39,7 +39,8 @@ allprojects {
    // for example,my demo's application module uses glide's annotation processor
    plugins {
        //...
-       id 'com.google.devtools.ksp'
+       //add version if u haven't specified the version 
+       id 'com.google.devtools.ksp' version "1.6.21-1.0.5"
    }
    //add ksp generated class path into sourceSets
    android {
