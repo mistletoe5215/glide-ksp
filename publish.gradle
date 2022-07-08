@@ -12,7 +12,7 @@ task javadocsJar(type: Jar, dependsOn: javadoc) {
 ext {
     PUBLISH_GROUP_ID = 'io.github.mistletoe5215'
     PUBLISH_ARTIFACT_ID = "glide-ksp"
-    PUBLISH_VERSION = '1.0.0'
+    PUBLISH_VERSION = '1.0.1'
 }
 
 ext["signing.keyId"] = ''

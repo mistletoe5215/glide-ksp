@@ -218,12 +218,11 @@ internal class RequestOptionsGenerator(private val processorUtil: ProcessorUtil)
             methodSpecBuilder
                 .beginControlFlow("if (%T.%N == null)", glideOptionsName!!, staticVariableName)
                 .addStatement(
-                    "%T.%N = $createNewOptionAndCall.%N",
+                    "%T.%N = $createNewOptionAndCall.autoClone()",
                     glideOptionsName!!,
                     staticVariableName,
                     glideOptionsName!!,
-                    equivalentInstanceMethodName,
-                    "autoClone()")
+                    equivalentInstanceMethodName)
                 .endControlFlow()
                 .addStatement("return %T.%N!!", glideOptionsName!!, staticVariableName)
         } else {
@@ -307,12 +306,11 @@ internal class RequestOptionsGenerator(private val processorUtil: ProcessorUtil)
             methodSpecBuilder
                 .beginControlFlow("if (%T.%N == null)", glideOptionsName!!, staticVariableName)
                 .addStatement(
-                    "%T.%N = $createNewOptionAndCall.%N",
+                    "%T.%N = $createNewOptionAndCall.autoClone()",
                     glideOptionsName!!,
                     staticVariableName,
                     glideOptionsName!!,
-                    instanceMethodName,
-                    "autoClone()")
+                    instanceMethodName)
                 .endControlFlow()
                 .addStatement("return %T.%N", glideOptionsName!!, staticVariableName)
         } else {
